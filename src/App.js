@@ -5,7 +5,13 @@ import RoomMateList from './RoomMateList';
 import GitCardList from './GitCard.js';
 import GitForm from './GitForm.js';
 
-let data = [
+
+
+class App extends React.Component {
+
+state ={
+
+  cards : [
   {
     name: "Ada Nduka Oyom",
     avatar_url:"https://avatars0.githubusercontent.com/u/13289217?v=4",
@@ -17,16 +23,21 @@ let data = [
     company: "Hecc tech"
   },
 
-];
+]
 
-const App = () => {
-  return (
-     <div className="App">
-    <RoomMateList/>
-    <GitForm/>
-    <GitCardList cards={data}/>
-     </div> 
-    );
 };
+
+
+
+  render() { 
+      return (
+          <div className="App">
+         <RoomMateList/>
+         <GitForm/>
+         <GitCardList cards={this.state.cards}/>
+          </div> 
+         );
+  }
+}
 
 export default App;
