@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './RoomMateList.css';
+import './roomMateList.css';
 
 import HelloWorld from './HelloWorld';
 
