@@ -28,12 +28,20 @@ state ={
 };
 
 
+addNewCard=(newCardInfo)=>{
+    this.setState(prevState=> ({
+      cards: prevState.cards.concat(newCardInfo)
+    }))
+  };
+
+
+
 
   render() { 
       return (
           <div className="App">
-         <RoomMateList/>
-         <GitForm/>
+         
+         <GitForm onSubmit={this.addNewCard}/>
          <GitCardList cards={this.state.cards}/>
           </div> 
          );
