@@ -16,21 +16,22 @@ class GitForm extends React.Component{
 		axios.get(`https://api.github.com/users/${this.state.userName}`)
 		.then(response=>{
 			console.log(response);
+			this.props.onSubmit(response.data);
 		});
 	};
 
-	newDataSubmit=(props)=>{
-		
-	}
-
+	
 	render(){
 		return(
-			<form onSubmit={this.newDataSubmit}>
+
+			<form onSubmit={this.newDataSubmit} >
 				<input 
 				type="text" 
 				value={this.state.userName}  
 				onChange={(event) => this.setState({userName: event.target.value})} 
-				placeholder="GitHub userName" required/>
+				placeholder="GitHub userName" required
+				style={{margin: '2em', border: '2px solid black'}}
+				/>
 
 				<button type="submit">Add</button>
 			</form>
