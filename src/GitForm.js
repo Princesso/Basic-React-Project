@@ -19,6 +19,10 @@ class GitForm extends React.Component{
 		});
 	};
 
+	newDataSubmit=(props)=>{
+		
+	}
+
 	render(){
 		return(
 			<form onSubmit={this.newDataSubmit}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './GitCard.css';
+import './gitCard.css';
 
 const GitCard =(props)=>{
 	return(
